@@ -1,107 +1,73 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Futuristik</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'Orbitron', sans-serif;
-            background: linear-gradient(135deg, #050505, #0a0025, #001133);
-            background-size: 300% 300%;
-            animation: bgMove 10s infinite alternate;
-            color: #fff;
-        }
-
-        @keyframes bgMove {
-            from { background-position: 0% 50%; }
-            to { background-position: 100% 50%; }
-        }
-
-        .card {
-            background: rgba(10, 10, 30, 0.7);
-            padding: 30px;
-            width: 380px;
-            border-radius: 20px;
-            text-align: center;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 0 25px #00eaff, 0 0 60px rgba(0, 238, 255, 0.3);
-            border: 2px solid rgba(0, 255, 255, 0.5);
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid #00eaff;
-            box-shadow: 0 0 20px #00eaff;
-        }
-
-        h2 {
-            font-size: 26px;
-            color: #00eaff;
-            text-shadow: 0 0 15px #00eaff;
-            margin-top: 15px;
-        }
-
-        .subtext {
-            font-size: 14px;
-            color: #9ddfff;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 15px;
-            color: #ccefff;
-        }
-
-        .social a {
-            color: #00eaff;
-            text-decoration: none;
-            font-weight: bold;
-            margin: 0 10px;
-            transition: 0.2s;
-            text-shadow: 0 0 5px #00eaff;
-        }
-
-        .social a:hover {
-            color: #ffffff;
-            text-shadow: 0 0 15px #ffffff;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fahatir Yaquta Alfaraby — Portofolio</title>
+  <meta name="description" content="Portofolio Fahatir Yaquta Alfaraby — XII TKJ" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <main class="wrap">
     <div class="card">
+      <div class="avatar-wrap">
+        <!-- Opsi A: gunakan file assets/profil.jpg -->
+        <img id="profileImage" src="assets/profil.jpg" alt="Foto Fahatir Yaquta Alfaraby" class="avatar" />
 
-        <!-- FOTO BASE64 -->
-        <img 
-            class="profile-img"
-            alt="Foto Profil"
-            src="foto fatir.jpg"
-        >
+        <!-- Opsi B: jika ingin pakai base64, ganti src di atas dengan:
+             src="data:image/jpeg;base64,PASTE_BASE64_HERE" -->
+      </div>
 
-        <h2>Fahatir Yaquta Alfaraby</h2>
+      <h1 class="name">Fahatir Yaquta Alfaraby</h1>
+      <div class="subtitle">Siswa • Kelas XII TKJ</div>
 
-        <div class="subtext">Siswa Kelas XII TKJ</div>
+      <p class="bio">
+        Halo — saya Fahatir. Saya tertarik pada pengembangan web, jaringan, dan teknologi futuristik.
+        Portofolio ini menampilkan beberapa proyek, kemampuan, dan kontak saya.
+      </p>
 
-        <p>
-            Developer • Cyber Enthusiast • Future Tech Explorer
-        </p>
+      <div class="links">
+        <a class="btn" href="https://github.com/username" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://instagram.com/username" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn" href="mailto:email@domain.com">Email</a>
+      </div>
 
-        <div class="social">
-            <a href="https://github.com/username">GitHub</a>
-            <a href="https://instagram.com/username">Instagram</a>
-            <a href="mailto:email@domain.com">Email</a>
-        </div>
+      <section class="projects">
+        <h2>Proyek Pilihan</h2>
+
+        <article class="project">
+          <h3>Website Profil Futuristik</h3>
+          <p>Desain neon dengan CSS modern — halaman statis berbasis HTML/CSS.</p>
+        </article>
+
+        <article class="project">
+          <h3>Mini Lab Jaringan</h3>
+          <p>Konfigurasi virtual, dokumentasi, dan script automasi untuk lab TKJ.</p>
+        </article>
+      </section>
     </div>
+
+    <div class="neon-grid" aria-hidden="true"></div>
+  </main>
+
+  <footer class="foot">
+    © <span id="year"></span> Fahatir Yaquta Alfaraby — XII TKJ
+  </footer>
+
+  <script>
+    // update tahun otomatis
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // fallback image jika assets/profil.jpg tidak ada
+    const img = document.getElementById('profileImage');
+    img.onerror = () => {
+      img.src = 'data:image/svg+xml;utf8,' + encodeURIComponent(`
+        <svg xmlns="http://www.w3.org/2000/svg" width="400" height="400">
+          <rect width="100%" height="100%" fill="#0a0f2b"/>
+          <text x="50%" y="50%" font-size="22" fill="#00eaff" text-anchor="middle" dominant-baseline="middle" font-family="Arial">Foto tidak tersedia</text>
+        </svg>
+      `);
+    };
+  </script>
 </body>
 </html>
