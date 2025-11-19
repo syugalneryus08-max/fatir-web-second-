@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Siswa</title>
+    
+    <style>
+        /* Aturan dasar untuk seluruh halaman */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5; /* Latar belakang abu-abu sangat muda */
+            color: #333;
+        }
+
+        /* Header (Judul Halaman) */
+        .header {
+            background-color: #4169e1; /* Warna biru */
+            color: white;
+            text-align: center;
+            padding: 25px 0 15px 0;
+        }
+
+        .header h1 {
+            margin-bottom: 5px;
+        }
+
+        .header p {
+            margin-top: 0;
+            font-size: 1em;
+        }
+
+        /* Navigation Bar (Menu) */
+        .navbar {
+            text-align: center;
+            padding: 12px 0;
+            background-color: white;
+            border-bottom: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #4169e1; /* Warna teks biru */
+            margin: 0 20px;
+            font-weight: 500;
+            padding-bottom: 3px;
+            transition: color 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #1e90ff; /* Biru muda saat di-hover */
+            border-bottom: 2px solid #1e90ff;
+        }
+
+        /* Main Content Area */
+        .content {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+            /* Memberikan ruang di bagian bawah agar tidak tertutup footer */
+            padding-bottom: 70px; 
+        }
+
+        /* Profile Card (Kotak Putih di Tengah) */
+        .profile-card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex; 
+            align-items: center; 
+            gap: 30px;
+        }
+
+        /* Profile Image Styling (Untuk foto lingkaran) */
+        .profile-image-container {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%; /* Membuat bentuk lingkaran */
+            overflow: hidden; 
+            border: 3px solid #ddd;
+            flex-shrink: 0;
+        }
+
+        .profile-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Memastikan gambar mengisi seluruh area */
+        }
+
+        /* Profile Details Text */
+        .profile-details h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 1.8em;
+        }
+
+        .profile-details p {
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #4169e1; /* Warna biru */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            width: 100%;
+            /* Menempel di bagian bawah viewport */
+            position: fixed; 
+            bottom: 0;
+        }
+    </style>
+    </head>
+<body>
+
+    <header class="header">
+        <h1>Profil Siswa</h1>
+        <p>Website Portofolio & Dokumentasi</p>
+    </header>
+
+    <nav class="navbar">
+        <a href="#beranda">Beranda</a>
+        <a href="#tentang">Tentang Saya</a>
+        <a href="#tugas">Tugas</a>
+        <a href="#pkl">Pengalaman PKL</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+
+    <main class="content">
+        <div class="profile-card">
+            <div class="profile-image-container">
+                <img src="foto-profil.jpg" alt="Foto Profil Muhammad Irsani" class="profile-image">
+            </div>
+            
+            <div class="profile-details">
+                <h2>Muhammad Irsani</h2>
+                <p>Kelas: XII Rekayasa Perangkat Lunak</p>
+                <p>Email: muhammadirsani617@gmail.com</p>
+                <p>Deskripsi: Siswa aktif dalam kegiatan praktik ASJ dan pengembangan software.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2024 Profil Siswa — Dibuat untuk dokumentasi & tugas sekolah</p>
+    </footer>
+
+</body>
+</html>
