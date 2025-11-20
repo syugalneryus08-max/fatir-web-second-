@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Saya | Fahatir</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f3d27, #0a593a);
+            color: white;
+            min-height: 100vh;
+            padding-bottom: 60px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            animation: fadeIn 1.2s ease;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(0,255,140,0.7);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #d2ffe7;
+        }
+
+        /* FOTO PROFIL */
+        .photo {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .photo img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #4dff9f;
+            box-shadow: 0 0 25px #4dff9f;
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* CARD INFORMASI */
+        .card {
+            background: rgba(255,255,255,0.08);
+            width: 80%;
+            max-width: 700px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0,255,170,0.3);
+            animation: fadeInUp 1.3s ease;
+        }
+
+        .card h2 {
+            margin-bottom: 10px;
+            font-size: 26px;
+            color: #9affd4;
+        }
+
+        .card p {
+            color: #e4fff4;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* SOCIAL MEDIA */
+        .social {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social a {
+            color: #4dffb8;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .social a:hover {
+            text-shadow: 0 0 12px white;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+        <h1>Tentang Saya</h1>
+        <p>Kenalan lebih dekat bareng Fahatir Yaquta Alfaraby</p>
+    </div>
+
+    <!-- FOTO PROFIL -->
+    <div class="photo">
+        <img src="https://i.ibb.co/4RqTzVL/user.png" alt="Foto Profil">
+    </div>
+
+    <!-- CARD INFORMASI -->
+    <div class="card">
+        <h2>Fahatir Yaquta Alfaraby</h2>
+        <p><strong>Kelas:</strong> XII Teknik Komputer & Jaringan</p>
+        <p><strong>Keahlian:</strong> Jaringan komputer, konfigurasi perangkat, troubleshooting, web basic.</p>
+        <p><strong>Karakter:</strong> Kreatif, cepat belajar, suka eksperimen, dan selalu penasaran dengan teknologi baru.</p>
+        <p><strong>Motivasi:</strong> Ingin menjadi seseorang yang ahli dalam dunia teknologi dan membuat karya yang bermanfaat.</p>
+    </div>
+
+    <!-- SOCIAL MEDIA -->
+    <div class="social">
+        <a href="https://github.com/">GitHub</a>
+        <a href="https://instagram.com/">Instagram</a>
+        <a href="mailto:fahatiralfaraby@gmail.com">Email</a>
+    </div>
+
+</body>
+</html>
